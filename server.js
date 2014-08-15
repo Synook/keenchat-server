@@ -6,8 +6,12 @@ var sqlite3 = require("sqlite3");
 var bodyParser = require("body-parser");
 var io = require("socket.io").listen(process.env.WEBSOCKETS_PORT || 5001);
 var crypto = require("crypto");
+var fs = require("fs");
 
+var db_exists = fs.existsSync("database.db");
 var db = new sqlite3.Database("database.db");
+if (!db_exists) db.exec(fs.readFileSync("setup.sql"));
+
 var app = express();
 app.use(bodyParser.json());
 
