@@ -4,7 +4,7 @@ var express = require("express");
 var util = require("util");
 var sqlite3 = require("sqlite3");
 var bodyParser = require("body-parser");
-var io = require("socket.io").listen(5001);
+var io = require("socket.io").listen(process.env.WEBSOCKETS_PORT || 5001);
 var crypto = require("crypto");
 
 var db = new sqlite3.Database("database.db");

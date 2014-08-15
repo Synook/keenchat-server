@@ -2,6 +2,12 @@
 
 The new Keenchat REST API has channels, and an authenticated post mechanism. There is also a companion Websockets server than runs concurrently.
 
+## Installation
+
+1. Create a new SQLite3 database named `database.db` and execute `setup.sql` on it: `sqlite3 database.db < setup.sql`
+2. Set the `PORT` and `WEBSOCKETS_PORT` environment variables (defaults are 5000 and 5001).
+3. Run `node server.js` 
+
 ## REST API
 
 The REST API consists of the following endpoints:
