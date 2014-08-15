@@ -1,0 +1,13 @@
+{
+    "name" : "keenchat",
+    "version" : "0.0.1",
+    "main" : "server.js",
+    "description" : "An experimental IRC-like server.",
+    "readme" : "README.md",
+    "dependencies" : {
+        "express" : "latest",
+        "sqlite3" : "latest",
+        "body-parser" : "latest",
+        "socket.io" : "latest"
+    }
+}
